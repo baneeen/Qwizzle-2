@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B877B19B16FFD25D00007668 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B877B19A16FFD25D00007668 /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B877B284170108EF00007668 /* Storyboard-old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B877B283170108EE00007668 /* Storyboard-old.storyboard */; };
+		B877B28C170109E600007668 /* QWZCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B877B289170109E600007668 /* QWZCreateView.m */; };
+		B877B28D170109E600007668 /* QWZHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B877B28B170109E600007668 /* QWZHomeView.m */; };
+		B8B26F23170F9576006F56C0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */; };
+		B8B26F2B170F9EC4006F56C0 /* QWZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */; };
+		B8B26F2E170FA358006F56C0 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F2D170FA358006F56C0 /* Answer.m */; };
+		B8B26F31170FA37A006F56C0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F30170FA37A006F56C0 /* Question.m */; };
+		B8B26F34170FA386006F56C0 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F33170FA386006F56C0 /* Quiz.m */; };
+		B8B26F3817108746006F56C0 /* QWZdatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */; };
+		B8CB27ED17012CA1001BB56E /* QWZTakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EC17012CA1001BB56E /* QWZTakeView.m */; };
+		B8CB27F017012D34001BB56E /* QWZViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EF17012D34001BB56E /* QWZViewView.m */; };
+		E833CF871707681A0006B832 /* Storyboard_v2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E833CF861707681A0006B832 /* Storyboard_v2.storyboard */; };
+		E833CF90170904150006B832 /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E833CF8F170904150006B832 /* UIView+FindFirstResponder.m */; };
+		E873E66D16FCF6640097F4F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873E66C16FCF6640097F4F2 /* UIKit.framework */; };
+		E873E66F16FCF6640097F4F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873E66E16FCF6640097F4F2 /* Foundation.framework */; };
+		E873E67116FCF6640097F4F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873E67016FCF6640097F4F2 /* CoreGraphics.framework */; };
+		E873E67716FCF6640097F4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E873E67516FCF6640097F4F2 /* InfoPlist.strings */; };
+		E873E67916FCF6640097F4F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E67816FCF6640097F4F2 /* main.m */; };
+		E873E67D16FCF6640097F4F2 /* QWZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E67C16FCF6640097F4F2 /* QWZAppDelegate.m */; };
+		E873E67F16FCF6640097F4F2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E873E67E16FCF6640097F4F2 /* Default.png */; };
+		E873E68116FCF6640097F4F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873E68016FCF6640097F4F2 /* Default@2x.png */; };
+		E873E68316FCF6640097F4F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873E68216FCF6640097F4F2 /* Default-568h@2x.png */; };
+		E873E68B16FCF6990097F4F2 /* QWZQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E68A16FCF6990097F4F2 /* QWZQuiz.m */; };
+		E873E68E16FCF9930097F4F2 /* QWZQuizSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E68D16FCF9930097F4F2 /* QWZQuizSet.m */; };
+		E873E69116FD062F0097F4F2 /* QWZAnsweredQuizSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E69016FD062F0097F4F2 /* QWZAnsweredQuizSet.m */; };
+		E873E69B16FD0F980097F4F2 /* QWZQwizzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E69A16FD0F980097F4F2 /* QWZQwizzleViewController.m */; };
+		E873E6B516FD382D0097F4F2 /* QWZCreateQwizzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E6B316FD382C0097F4F2 /* QWZCreateQwizzleViewController.m */; };
+		E873E6BA16FD40030097F4F2 /* QWZTakeQwizzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E6B816FD40020097F4F2 /* QWZTakeQwizzleViewController.m */; };
+		E873E6BF16FD41740097F4F2 /* QWZViewQwizzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873E6BD16FD41730097F4F2 /* QWZViewQwizzleViewController.m */; };
+		E8EA1F67170B9EFF00956433 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EA1F66170B9EFF00956433 /* Default.png */; };
+		E8EA1F69170B9F0C00956433 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EA1F68170B9F0C00956433 /* Default@2x.png */; };
+		E8EA1F6B170B9F1000956433 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EA1F6A170B9F1000956433 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B877B19A16FFD25D00007668 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B877B283170108EE00007668 /* Storyboard-old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-old.storyboard"; sourceTree = "<group>"; };
+		B877B288170109E600007668 /* QWZCreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZCreateView.h; sourceTree = "<group>"; };
+		B877B289170109E600007668 /* QWZCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZCreateView.m; sourceTree = "<group>"; };
+		B877B28A170109E600007668 /* QWZHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZHomeView.h; sourceTree = "<group>"; };
+		B877B28B170109E600007668 /* QWZHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZHomeView.m; sourceTree = "<group>"; };
+		B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B8B26F2A170F9EC4006F56C0 /* QWZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QWZModel.xcdatamodel; sourceTree = "<group>"; };
+		B8B26F2C170FA358006F56C0 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		B8B26F2D170FA358006F56C0 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		B8B26F2F170FA37A006F56C0 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		B8B26F30170FA37A006F56C0 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		B8B26F32170FA386006F56C0 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		B8B26F33170FA386006F56C0 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = QWZdatabase.sqlite; sourceTree = "<group>"; };
+		B8CB27EB17012CA1001BB56E /* QWZTakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZTakeView.h; sourceTree = "<group>"; };
+		B8CB27EC17012CA1001BB56E /* QWZTakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZTakeView.m; sourceTree = "<group>"; };
+		B8CB27EE17012D34001BB56E /* QWZViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZViewView.h; sourceTree = "<group>"; };
+		B8CB27EF17012D34001BB56E /* QWZViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZViewView.m; sourceTree = "<group>"; };
+		E833CF861707681A0006B832 /* Storyboard_v2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_v2.storyboard; sourceTree = "<group>"; };
+		E833CF8E170904150006B832 /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
+		E833CF8F170904150006B832 /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
+		E873E66916FCF6640097F4F2 /* Qwizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qwizzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E873E66C16FCF6640097F4F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E873E66E16FCF6640097F4F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E873E67016FCF6640097F4F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E873E67416FCF6640097F4F2 /* Qwizzle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Qwizzle-Info.plist"; sourceTree = "<group>"; };
+		E873E67616FCF6640097F4F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E873E67816FCF6640097F4F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E873E67A16FCF6640097F4F2 /* Qwizzle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qwizzle-Prefix.pch"; sourceTree = "<group>"; };
+		E873E67B16FCF6640097F4F2 /* QWZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QWZAppDelegate.h; sourceTree = "<group>"; };
+		E873E67C16FCF6640097F4F2 /* QWZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QWZAppDelegate.m; sourceTree = "<group>"; };
+		E873E67E16FCF6640097F4F2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E873E68016FCF6640097F4F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E873E68216FCF6640097F4F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E873E68916FCF6990097F4F2 /* QWZQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZQuiz.h; sourceTree = "<group>"; };
+		E873E68A16FCF6990097F4F2 /* QWZQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZQuiz.m; sourceTree = "<group>"; };
+		E873E68C16FCF9930097F4F2 /* QWZQuizSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZQuizSet.h; sourceTree = "<group>"; };
+		E873E68D16FCF9930097F4F2 /* QWZQuizSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZQuizSet.m; sourceTree = "<group>"; };
+		E873E68F16FD062F0097F4F2 /* QWZAnsweredQuizSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZAnsweredQuizSet.h; sourceTree = "<group>"; };
+		E873E69016FD062F0097F4F2 /* QWZAnsweredQuizSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZAnsweredQuizSet.m; sourceTree = "<group>"; };
+		E873E69916FD0F980097F4F2 /* QWZQwizzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZQwizzleViewController.h; sourceTree = "<group>"; };
+		E873E69A16FD0F980097F4F2 /* QWZQwizzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZQwizzleViewController.m; sourceTree = "<group>"; };
+		E873E6B216FD382C0097F4F2 /* QWZCreateQwizzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZCreateQwizzleViewController.h; sourceTree = "<group>"; };
+		E873E6B316FD382C0097F4F2 /* QWZCreateQwizzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZCreateQwizzleViewController.m; sourceTree = "<group>"; };
+		E873E6B716FD40020097F4F2 /* QWZTakeQwizzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZTakeQwizzleViewController.h; sourceTree = "<group>"; };
+		E873E6B816FD40020097F4F2 /* QWZTakeQwizzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZTakeQwizzleViewController.m; sourceTree = "<group>"; };
+		E873E6BC16FD41730097F4F2 /* QWZViewQwizzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZViewQwizzleViewController.h; sourceTree = "<group>"; };
+		E873E6BD16FD41730097F4F2 /* QWZViewQwizzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZViewQwizzleViewController.m; sourceTree = "<group>"; };
+		E8EA1F66170B9EFF00956433 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E8EA1F68170B9F0C00956433 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E8EA1F6A170B9F1000956433 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E873E66616FCF6640097F4F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B26F23170F9576006F56C0 /* libsqlite3.0.dylib in Frameworks */,
+				B877B19B16FFD25D00007668 /* CoreData.framework in Frameworks */,
+				E873E66D16FCF6640097F4F2 /* UIKit.framework in Frameworks */,
+				E873E66F16FCF6640097F4F2 /* Foundation.framework in Frameworks */,
+				E873E67116FCF6640097F4F2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8186C364170D3B5400CB5BDF /* old files */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB27EF17012D34001BB56E /* QWZViewView.m */,
+				B8CB27EE17012D34001BB56E /* QWZViewView.h */,
+				B8CB27EC17012CA1001BB56E /* QWZTakeView.m */,
+				B8CB27EB17012CA1001BB56E /* QWZTakeView.h */,
+				B877B28B170109E600007668 /* QWZHomeView.m */,
+				B877B28A170109E600007668 /* QWZHomeView.h */,
+				B877B289170109E600007668 /* QWZCreateView.m */,
+				B877B288170109E600007668 /* QWZCreateView.h */,
+				B877B283170108EE00007668 /* Storyboard-old.storyboard */,
+			);
+			name = "old files";
+			sourceTree = "<group>";
+		};
+		E873E66016FCF6640097F4F2 = {
+			isa = PBXGroup;
+			children = (
+				B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */,
+				B8B26F32170FA386006F56C0 /* Quiz.h */,
+				B8B26F33170FA386006F56C0 /* Quiz.m */,
+				B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */,
+				B8B26F2F170FA37A006F56C0 /* Question.h */,
+				B8B26F30170FA37A006F56C0 /* Question.m */,
+				B8B26F2C170FA358006F56C0 /* Answer.h */,
+				B8B26F2D170FA358006F56C0 /* Answer.m */,
+				B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */,
+				E8EA1F6A170B9F1000956433 /* Default-568h@2x.png */,
+				E8EA1F68170B9F0C00956433 /* Default@2x.png */,
+				E8EA1F66170B9EFF00956433 /* Default.png */,
+				E873E67216FCF6640097F4F2 /* Qwizzle */,
+				E873E66B16FCF6640097F4F2 /* Frameworks */,
+				E873E66A16FCF6640097F4F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E873E66A16FCF6640097F4F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E873E66916FCF6640097F4F2 /* Qwizzle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E873E66B16FCF6640097F4F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B877B19A16FFD25D00007668 /* CoreData.framework */,
+				E873E66C16FCF6640097F4F2 /* UIKit.framework */,
+				E873E66E16FCF6640097F4F2 /* Foundation.framework */,
+				E873E67016FCF6640097F4F2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E873E67216FCF6640097F4F2 /* Qwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				E873E67316FCF6640097F4F2 /* Supporting Files */,
+				8186C364170D3B5400CB5BDF /* old files */,
+				E873E67B16FCF6640097F4F2 /* QWZAppDelegate.h */,
+				E873E67C16FCF6640097F4F2 /* QWZAppDelegate.m */,
+				E873E68916FCF6990097F4F2 /* QWZQuiz.h */,
+				E873E68A16FCF6990097F4F2 /* QWZQuiz.m */,
+				E873E68C16FCF9930097F4F2 /* QWZQuizSet.h */,
+				E873E68D16FCF9930097F4F2 /* QWZQuizSet.m */,
+				E873E68F16FD062F0097F4F2 /* QWZAnsweredQuizSet.h */,
+				E873E69016FD062F0097F4F2 /* QWZAnsweredQuizSet.m */,
+				E873E69916FD0F980097F4F2 /* QWZQwizzleViewController.h */,
+				E873E69A16FD0F980097F4F2 /* QWZQwizzleViewController.m */,
+				E873E6B216FD382C0097F4F2 /* QWZCreateQwizzleViewController.h */,
+				E873E6B316FD382C0097F4F2 /* QWZCreateQwizzleViewController.m */,
+				E873E6B716FD40020097F4F2 /* QWZTakeQwizzleViewController.h */,
+				E873E6B816FD40020097F4F2 /* QWZTakeQwizzleViewController.m */,
+				E873E6BC16FD41730097F4F2 /* QWZViewQwizzleViewController.h */,
+				E873E6BD16FD41730097F4F2 /* QWZViewQwizzleViewController.m */,
+				E833CF861707681A0006B832 /* Storyboard_v2.storyboard */,
+				E833CF8E170904150006B832 /* UIView+FindFirstResponder.h */,
+				E833CF8F170904150006B832 /* UIView+FindFirstResponder.m */,
+			);
+			path = Qwizzle;
+			sourceTree = "<group>";
+		};
+		E873E67316FCF6640097F4F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E873E67416FCF6640097F4F2 /* Qwizzle-Info.plist */,
+				E873E67516FCF6640097F4F2 /* InfoPlist.strings */,
+				E873E67816FCF6640097F4F2 /* main.m */,
+				E873E67A16FCF6640097F4F2 /* Qwizzle-Prefix.pch */,
+				E873E67E16FCF6640097F4F2 /* Default.png */,
+				E873E68016FCF6640097F4F2 /* Default@2x.png */,
+				E873E68216FCF6640097F4F2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E873E66816FCF6640097F4F2 /* Qwizzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E873E68616FCF6640097F4F2 /* Build configuration list for PBXNativeTarget "Qwizzle" */;
+			buildPhases = (
+				E873E66516FCF6640097F4F2 /* Sources */,
+				E873E66616FCF6640097F4F2 /* Frameworks */,
+				E873E66716FCF6640097F4F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qwizzle;
+			productName = Qwizzle;
+			productReference = E873E66916FCF6640097F4F2 /* Qwizzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E873E66116FCF6640097F4F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QWZ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Florida Tech";
+			};
+			buildConfigurationList = E873E66416FCF6640097F4F2 /* Build configuration list for PBXProject "Qwizzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E873E66016FCF6640097F4F2;
+			productRefGroup = E873E66A16FCF6640097F4F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E873E66816FCF6640097F4F2 /* Qwizzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E873E66716FCF6640097F4F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E873E67716FCF6640097F4F2 /* InfoPlist.strings in Resources */,
+				E873E67F16FCF6640097F4F2 /* Default.png in Resources */,
+				E873E68116FCF6640097F4F2 /* Default@2x.png in Resources */,
+				E873E68316FCF6640097F4F2 /* Default-568h@2x.png in Resources */,
+				B877B284170108EF00007668 /* Storyboard-old.storyboard in Resources */,
+				E833CF871707681A0006B832 /* Storyboard_v2.storyboard in Resources */,
+				E8EA1F67170B9EFF00956433 /* Default.png in Resources */,
+				E8EA1F69170B9F0C00956433 /* Default@2x.png in Resources */,
+				E8EA1F6B170B9F1000956433 /* Default-568h@2x.png in Resources */,
+				B8B26F3817108746006F56C0 /* QWZdatabase.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E873E66516FCF6640097F4F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E873E67916FCF6640097F4F2 /* main.m in Sources */,
+				E873E67D16FCF6640097F4F2 /* QWZAppDelegate.m in Sources */,
+				E873E68B16FCF6990097F4F2 /* QWZQuiz.m in Sources */,
+				E873E68E16FCF9930097F4F2 /* QWZQuizSet.m in Sources */,
+				E873E69116FD062F0097F4F2 /* QWZAnsweredQuizSet.m in Sources */,
+				E873E69B16FD0F980097F4F2 /* QWZQwizzleViewController.m in Sources */,
+				E873E6B516FD382D0097F4F2 /* QWZCreateQwizzleViewController.m in Sources */,
+				E873E6BA16FD40030097F4F2 /* QWZTakeQwizzleViewController.m in Sources */,
+				E873E6BF16FD41740097F4F2 /* QWZViewQwizzleViewController.m in Sources */,
+				B877B28C170109E600007668 /* QWZCreateView.m in Sources */,
+				B877B28D170109E600007668 /* QWZHomeView.m in Sources */,
+				B8CB27ED17012CA1001BB56E /* QWZTakeView.m in Sources */,
+				B8CB27F017012D34001BB56E /* QWZViewView.m in Sources */,
+				E833CF90170904150006B832 /* UIView+FindFirstResponder.m in Sources */,
+				B8B26F2B170F9EC4006F56C0 /* QWZModel.xcdatamodeld in Sources */,
+				B8B26F2E170FA358006F56C0 /* Answer.m in Sources */,
+				B8B26F31170FA37A006F56C0 /* Question.m in Sources */,
+				B8B26F34170FA386006F56C0 /* Quiz.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E873E67516FCF6640097F4F2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E873E67616FCF6640097F4F2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E873E68416FCF6640097F4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E873E68516FCF6640097F4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E873E68716FCF6640097F4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qwizzle/Qwizzle-Prefix.pch";
+				INFOPLIST_FILE = "Qwizzle/Qwizzle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E873E68816FCF6640097F4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qwizzle/Qwizzle-Prefix.pch";
+				INFOPLIST_FILE = "Qwizzle/Qwizzle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E873E66416FCF6640097F4F2 /* Build configuration list for PBXProject "Qwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E873E68416FCF6640097F4F2 /* Debug */,
+				E873E68516FCF6640097F4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E873E68616FCF6640097F4F2 /* Build configuration list for PBXNativeTarget "Qwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E873E68716FCF6640097F4F2 /* Debug */,
+				E873E68816FCF6640097F4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8B26F2A170F9EC4006F56C0 /* QWZModel.xcdatamodel */,
+			);
+			currentVersion = B8B26F2A170F9EC4006F56C0 /* QWZModel.xcdatamodel */;
+			path = QWZModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E873E66116FCF6640097F4F2 /* Project object */;
+}

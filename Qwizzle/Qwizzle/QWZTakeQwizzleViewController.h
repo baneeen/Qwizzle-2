@@ -1,0 +1,32 @@
+//
+//  QWZAnswerViewController.h
+//  Qwizzle
+//
+//  Created by Krissada Dechokul on 3/22/13.
+//  Copyright (c) 2013 Florida Tech. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "Quiz.h"
+
+@class QWZQuizSet;
+@class QWZAnsweredQuizSet;
+@class QWZQwizzleViewController;
+
+@interface QWZTakeQwizzleViewController : UIViewController <UITextViewDelegate>
+{
+    IBOutlet UIScrollView *scrollView;
+}
+
+@property (nonatomic, weak) QWZQwizzleViewController *origin;
+@property (nonatomic, strong) NSMutableArray *answerList;
+@property (nonatomic, strong) NSMutableArray *controlList;
+@property (nonatomic, strong) QWZQuizSet *quizSet;
+@property (nonatomic, strong) QWZAnsweredQuizSet *answeredQuizSet;
+
+@property (assign) NSInteger qwz_id;
+
+- (IBAction)fillOutAQwizzle:(id)sender;
+
+
+@end
