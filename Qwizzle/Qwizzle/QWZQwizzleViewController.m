@@ -174,16 +174,16 @@ takenQuizSet=fetchedObjects;
         //QWZQuizSet *qs = [allQuizSets objectAtIndex:[indexPath row]];
         Quiz *obj=[takenQuizSet objectAtIndex:[indexPath row]];
     
-        [[cell textLabel] setText:[NSString stringWithFormat:@"%@",obj.qwz_id]];
+        [[cell textLabel] setText:obj.title];
     }
     else {
         Quiz *obj=[takenQuizSet objectAtIndex:[indexPath row]];
         
-       QWZAnsweredQuizSet *qs = [allAnsweredQuizSets objectAtIndex:[indexPath row]];
+       //QWZAnsweredQuizSet *qs = [allAnsweredQuizSets objectAtIndex:[indexPath row]];
     
         
     
-        [[cell textLabel] setText:@"sss"];
+        [[cell textLabel] setText:obj.title];
     
     }
     
@@ -235,7 +235,7 @@ takenQuizSet=fetchedObjects;
     if (section == 0) {
         Quiz *obj =[takenQuizSet objectAtIndex:[indexPath row]];
         
-        selectedQuiz =(NSInteger)obj.qwz_id;
+        selectedQuiz =obj.qwz_id;
         
         // Perform a segue (a view's transition) given a storyboard segue's ID that we specified in storyboard
         // We need to do it this way because our data cells are dynamically generated, so we can't pre-wire them.
@@ -245,7 +245,7 @@ takenQuizSet=fetchedObjects;
     else if (section == 1) {
         Quiz *obj =[submitQuizSet objectAtIndex:[indexPath row]];
         
-        selectedQuiz =(NSInteger)obj.qwz_id;
+        selectedQuiz =obj.qwz_id;
         [self performSegueWithIdentifier:@"SEGUEViewQwizzle" sender:self];
     }
     else {

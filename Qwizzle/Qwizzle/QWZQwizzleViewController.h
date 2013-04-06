@@ -29,7 +29,7 @@
     
     // Handle the selected quiz tapped by the user
     QWZQuizSet *selectedQuiz1;
-    NSInteger selectedQuiz;
+    NSNumber *selectedQuiz;
     
     //this will stores titles for taken quiz
     NSArray *takenQuizSet;

@@ -57,7 +57,7 @@
     // Preparing UI - Create and configure programmatically
     CGRect titleFrame = CGRectMake(40, 10, 250, 60);
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleFrame];
-    [titleLabel setText:[[NSString alloc] initWithFormat:@"Taking Qwizzle:\n %ld",(long)qwz_id]];
+    [titleLabel setText:[[NSString alloc] initWithFormat:@"Taking Qwizzle:\n %d",[qwz_id intValue]]];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
     [titleLabel setTextAlignment:NSTextAlignmentCenter];
     [titleLabel setNumberOfLines:2];
@@ -94,7 +94,7 @@
 NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
 [fetchRequest setEntity:entity];
 
-NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qwz_id==%@", [NSString stringWithFormat:@"%",qwz_id]];
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qwz_id == %d", [qwz_id intValue]];
 [fetchRequest setPredicate:predicate];
 
 NSError *error = nil;

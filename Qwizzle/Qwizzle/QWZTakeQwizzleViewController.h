@@ -24,7 +24,7 @@
 @property (nonatomic, strong) QWZQuizSet *quizSet;
 @property (nonatomic, strong) QWZAnsweredQuizSet *answeredQuizSet;
 
-@property (assign) NSInteger qwz_id;
+@property (nonatomic,strong) NSNumber *qwz_id; //hold the prameters passed from QWZQWZview
 
 - (IBAction)fillOutAQwizzle:(id)sender;
 
