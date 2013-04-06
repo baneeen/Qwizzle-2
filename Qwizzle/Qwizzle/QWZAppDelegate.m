@@ -28,7 +28,7 @@
 
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
     
-    NSLog(@"test: %@", [navController.viewControllers[0] class]);
+    NSLog(@"test::: %@", [navController.viewControllers[0] class]);
     
     // assign the managed object context to the initial view controller
     QWZQwizzleViewController *qvc = (QWZQwizzleViewController *)navController.childViewControllers[0];

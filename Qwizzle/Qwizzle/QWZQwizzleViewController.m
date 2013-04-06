@@ -179,9 +179,10 @@ takenQuizSet=fetchedObjects;
     else {
         Quiz *obj=[takenQuizSet objectAtIndex:[indexPath row]];
         
-       //QWZAnsweredQuizSet *qs = [allAnsweredQuizSets objectAtIndex:[indexPath row]];
-       
+       QWZAnsweredQuizSet *qs = [allAnsweredQuizSets objectAtIndex:[indexPath row]];
+    
         
+    
         [[cell textLabel] setText:@"sss"];
     
     }
