@@ -11,11 +11,11 @@
 		B877B284170108EF00007668 /* Storyboard-old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B877B283170108EE00007668 /* Storyboard-old.storyboard */; };
 		B877B28C170109E600007668 /* QWZCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B877B289170109E600007668 /* QWZCreateView.m */; };
 		B877B28D170109E600007668 /* QWZHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B877B28B170109E600007668 /* QWZHomeView.m */; };
+		B898E4CB17112F4B008A3393 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4CA17112F4B008A3393 /* Quiz.m */; };
+		B898E4CE17112F62008A3393 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4CD17112F62008A3393 /* Question.m */; };
+		B898E4D117112F6A008A3393 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4D017112F6A008A3393 /* Answer.m */; };
 		B8B26F23170F9576006F56C0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */; };
 		B8B26F2B170F9EC4006F56C0 /* QWZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */; };
-		B8B26F2E170FA358006F56C0 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F2D170FA358006F56C0 /* Answer.m */; };
-		B8B26F31170FA37A006F56C0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F30170FA37A006F56C0 /* Question.m */; };
-		B8B26F34170FA386006F56C0 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F33170FA386006F56C0 /* Quiz.m */; };
 		B8B26F3817108746006F56C0 /* QWZdatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */; };
 		B8CB27ED17012CA1001BB56E /* QWZTakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EC17012CA1001BB56E /* QWZTakeView.m */; };
 		B8CB27F017012D34001BB56E /* QWZViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EF17012D34001BB56E /* QWZViewView.m */; };
@@ -49,14 +49,14 @@
 		B877B289170109E600007668 /* QWZCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZCreateView.m; sourceTree = "<group>"; };
 		B877B28A170109E600007668 /* QWZHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZHomeView.h; sourceTree = "<group>"; };
 		B877B28B170109E600007668 /* QWZHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZHomeView.m; sourceTree = "<group>"; };
+		B898E4C917112F4B008A3393 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		B898E4CA17112F4B008A3393 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		B898E4CC17112F62008A3393 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		B898E4CD17112F62008A3393 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		B898E4CF17112F6A008A3393 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		B898E4D017112F6A008A3393 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
 		B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B8B26F2A170F9EC4006F56C0 /* QWZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QWZModel.xcdatamodel; sourceTree = "<group>"; };
-		B8B26F2C170FA358006F56C0 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
-		B8B26F2D170FA358006F56C0 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
-		B8B26F2F170FA37A006F56C0 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
-		B8B26F30170FA37A006F56C0 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
-		B8B26F32170FA386006F56C0 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
-		B8B26F33170FA386006F56C0 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 		B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = QWZdatabase.sqlite; sourceTree = "<group>"; };
 		B8CB27EB17012CA1001BB56E /* QWZTakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZTakeView.h; sourceTree = "<group>"; };
 		B8CB27EC17012CA1001BB56E /* QWZTakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZTakeView.m; sourceTree = "<group>"; };
@@ -132,18 +132,18 @@
 		E873E66016FCF6640097F4F2 = {
 			isa = PBXGroup;
 			children = (
+				B898E4CF17112F6A008A3393 /* Answer.h */,
+				B898E4D017112F6A008A3393 /* Answer.m */,
+				B898E4CC17112F62008A3393 /* Question.h */,
+				B898E4CD17112F62008A3393 /* Question.m */,
 				B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */,
-				B8B26F32170FA386006F56C0 /* Quiz.h */,
-				B8B26F33170FA386006F56C0 /* Quiz.m */,
-				B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */,
-				B8B26F2F170FA37A006F56C0 /* Question.h */,
-				B8B26F30170FA37A006F56C0 /* Question.m */,
-				B8B26F2C170FA358006F56C0 /* Answer.h */,
-				B8B26F2D170FA358006F56C0 /* Answer.m */,
 				B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */,
 				E8EA1F6A170B9F1000956433 /* Default-568h@2x.png */,
 				E8EA1F68170B9F0C00956433 /* Default@2x.png */,
 				E8EA1F66170B9EFF00956433 /* Default.png */,
+				B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */,
+				B898E4C917112F4B008A3393 /* Quiz.h */,
+				B898E4CA17112F4B008A3393 /* Quiz.m */,
 				E873E67216FCF6640097F4F2 /* Qwizzle */,
 				E873E66B16FCF6640097F4F2 /* Frameworks */,
 				E873E66A16FCF6640097F4F2 /* Products */,
@@ -298,9 +298,9 @@
 				B8CB27F017012D34001BB56E /* QWZViewView.m in Sources */,
 				E833CF90170904150006B832 /* UIView+FindFirstResponder.m in Sources */,
 				B8B26F2B170F9EC4006F56C0 /* QWZModel.xcdatamodeld in Sources */,
-				B8B26F2E170FA358006F56C0 /* Answer.m in Sources */,
-				B8B26F31170FA37A006F56C0 /* Question.m in Sources */,
-				B8B26F34170FA386006F56C0 /* Quiz.m in Sources */,
+				B898E4CB17112F4B008A3393 /* Quiz.m in Sources */,
+				B898E4CE17112F62008A3393 /* Question.m in Sources */,
+				B898E4D117112F6A008A3393 /* Answer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

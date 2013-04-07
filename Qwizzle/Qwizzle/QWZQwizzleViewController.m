@@ -25,6 +25,7 @@
 
 @implementation QWZQwizzleViewController
 
+
 #pragma mark - Default App's Behavior
 // Implement this method if there is anything needed to be configured before the view is loaded for the first time
 - (void)viewDidLoad
@@ -93,13 +94,23 @@ takenQuizSet=fetchedObjects;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Answer" inManagedObjectContext:context];
+    
+
     [fetchRequest setEntity:entity];
+    
+    
+    [fetchRequest setResultType:NSDictionaryResultType];
+    [fetchRequest setReturnsDistinctResults:YES];
+
+    [fetchRequest setPropertiesToFetch:@[@"qwz_id"]];
+
     
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects == nil) {
         NSLog(@"Cannot fetch for Quiz!");
     }
+    
     submitQuizSet=fetchedObjects;
     
 }
