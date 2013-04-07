@@ -99,11 +99,10 @@ takenQuizSet=fetchedObjects;
     [fetchRequest setEntity:entity];
     
     
+    [fetchRequest setEntity:entity];
     [fetchRequest setResultType:NSDictionaryResultType];
     [fetchRequest setReturnsDistinctResults:YES];
-
-    [fetchRequest setPropertiesToFetch:@[@"qwz_id"]];
-
+    [fetchRequest setPropertiesToFetch:[NSArray arrayWithObject:@"qwz_id"]];
     
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
@@ -111,8 +110,9 @@ takenQuizSet=fetchedObjects;
         NSLog(@"Cannot fetch for Quiz!");
     }
     
+   
+   // [fetchedObjects valueForKey:@"@Quiz.qwz_id"];
     submitQuizSet=fetchedObjects;
-    
 }
 
 // Implement this method if there is anything needed to be configure before the view appear on-screen
@@ -254,9 +254,9 @@ takenQuizSet=fetchedObjects;
         [self performSegueWithIdentifier:@"SEGUETakeQwizzle" sender:self];
     }
     else if (section == 1) {
-        Quiz *obj =[submitQuizSet objectAtIndex:[indexPath row]];
+        NSDictionary *obj =[submitQuizSet objectAtIndex:[indexPath row]];
         
-        selectedQuiz =obj.qwz_id;
+        selectedQuiz =[obj objectForKey:@"qwz_id"];
         [self performSegueWithIdentifier:@"SEGUEViewQwizzle" sender:self];
     }
     else {

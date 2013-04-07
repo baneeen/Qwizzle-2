@@ -9,14 +9,19 @@
 #import "QWZViewQwizzleViewController.h"
 #import "QWZQuiz.h"
 #import "QWZQuizSet.h"
+#import "QWZAppDelegate.h"
 
 @interface QWZViewQwizzleViewController ()
-
+{
+    NSManagedObjectContext *context;
+ 
+}
 @end
 
 @implementation QWZViewQwizzleViewController
 
 @synthesize quizSet;
+@synthesize qwz_id;
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //{
@@ -38,14 +43,28 @@
     
     //NSLog(@"QWZViewQwizzleViewController with a quizset %@", [quizSet title]);
     //NSLog(@"This quizset have %d questions", [[quizSet allQuizzes] count]);
+    //for fetching/inserting ..
+    QWZAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    context =[delegate managedObjectContext];
+   
+    //Quiz *quiz=[self getQuiz];
+    NSArray *questionSet =[self getQuestionSet];
+    NSArray *answerSet =[self getAnswerSet];
+    
     
     // For each quiz
-    QWZQuiz *quiz;
+   // QWZQuiz *quiz;
     CGFloat position;
     CGFloat latestHeight;
     UILabel *label;
-    for (NSInteger i = 0; i < [[quizSet allQuizzes] count]; i++) {
-        quiz = [[quizSet allQuizzes] objectAtIndex:i];
+ 
+
+    
+    NSInteger i=0;
+    for (Question *questionObj in questionSet)
+    {
+       
+       // quiz = [[quizSet allQuizzes] objectAtIndex:i];
         
         if (i == 0) { // Set initial position
             position = (i + 1) * OFFSET;
@@ -58,7 +77,7 @@
         
         CGRect labelFrame = CGRectMake(20, position, 250, 30);
         label = [[UILabel alloc] initWithFrame:labelFrame];
-        [label setText:[[NSString alloc] initWithFormat:@"%d.) %@", (i + 1), [quiz question]]];
+        [label setText:[NSString stringWithFormat:@"%d.) %@", (i + 1), questionObj.question]];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setNumberOfLines:0];
         [label setLineBreakMode:NSLineBreakByWordWrapping];
@@ -76,7 +95,8 @@
         position = latestHeight + 10; // Move just a little bit
         labelFrame = CGRectMake(40, position, 250, 30);
         label = [[UILabel alloc] initWithFrame:labelFrame];
-        [label setText:[[NSString alloc] initWithFormat:@"%@", [quiz answer]]];
+        Answer *answer= [answerSet objectAtIndex:i];
+        [label setText:[[NSString alloc] initWithFormat:@"%@", answer.answer]];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setNumberOfLines:0];
         [label setLineBreakMode:NSLineBreakByWordWrapping];
@@ -89,13 +109,69 @@
 
         [scrollView addSubview:label];
         
-        NSLog(@"question: %@ - answer %@", [quiz question], [quiz answer]);
+        NSLog(@"question: %@ - answer %@", questionObj, answer.answer);
     }
     
     [scrollView setContentSize:CGSizeMake(320, latestHeight + 20)];
     //for (QWZQuiz *quiz in [quizSet allQuizzes]) {
         
     //}
+}
+
+#pragma getQuiz
+- (Quiz *)getQuiz
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qwz_id == %d", [qwz_id intValue]];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    Quiz *fetchedObj = [[context executeFetchRequest:fetchRequest error:&error]lastObject];
+    if (fetchedObj == nil) {
+        NSLog(@"Cannnot fetch for a quiz!");
+    }
+    
+    return fetchedObj;
+    
+}
+- (NSArray *)getQuestionSet
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qwz_id == %d", [qwz_id intValue]];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *fetchedObj = [context executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObj == nil) {
+        NSLog(@"Cannnot fetch for a questions!");
+    }
+    
+    return fetchedObj;
+    
+}
+-(NSArray *)getAnswerSet
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Answer" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qwz_id == %d", [qwz_id intValue]];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *fetchedObj = [context executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObj == nil) {
+        NSLog(@"Cannnot fetch for a answers!");
+    }
+    
+    return fetchedObj;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

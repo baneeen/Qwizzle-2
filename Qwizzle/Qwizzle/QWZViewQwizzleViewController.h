@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quiz.h"
+#import "Question.h"
+#import "Answer.h"
+
 @class QWZQuizSet;
 
 #define OFFSET 40
@@ -19,6 +23,6 @@
 // Hold a quiz set
 @property (nonatomic, strong) QWZQuizSet *quizSet;
 
-@property (assign) NSInteger qwz_id;
+@property (nonatomic,strong) NSNumber *qwz_id; //hold the prameters passed from QWZQWZview
 
 @end
