@@ -307,9 +307,9 @@
          */
         
         // Submit a qwizzle to parents' viewcontroller
-         //[origin submitAQwizzle:quizSet];
-        
-        // Dismiss this view
+    
+        [origin fetchTakenQuiz];
+  
         [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
         
     }

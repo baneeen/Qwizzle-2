@@ -44,5 +44,8 @@
 //- (void)submitAQwizzle:(QWZQuizSet *)qz;
 
 - (void)fillOutAQwizzle:(QWZAnsweredQuizSet *)qzAnswers;
+-(void)fetchTakenQuiz;
+-(void)fetchSubmitQuiz;
+
 
 @end

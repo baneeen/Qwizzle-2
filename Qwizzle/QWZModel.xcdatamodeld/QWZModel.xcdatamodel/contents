@@ -26,8 +26,8 @@
         <relationship name="question_r" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="quiz_r" inverseEntity="Question" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Answer" positionX="-36" positionY="-72" width="128" height="73"/>
-        <element name="Quiz" positionX="0" positionY="45" width="128" height="133"/>
-        <element name="Question" positionX="180" positionY="-109" width="128" height="118"/>
+        <element name="Answer" positionX="-0" positionY="-145" width="128" height="163"/>
+        <element name="Question" positionX="268" positionY="-90" width="128" height="118"/>
+        <element name="Quiz" positionX="25" positionY="65" width="128" height="133"/>
     </elements>
 </model>

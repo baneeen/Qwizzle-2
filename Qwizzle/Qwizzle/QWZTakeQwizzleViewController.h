@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
+#import "Question.h"
+#import "Answer.h"
 
 @class QWZQuizSet;
 @class QWZAnsweredQuizSet;
