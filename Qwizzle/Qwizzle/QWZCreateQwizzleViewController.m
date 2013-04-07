@@ -27,8 +27,8 @@
 
 @synthesize origin; // The origin's viewcontroller: it is needed to pass data back
 @synthesize controlList;
-@synthesize questionList;
-@synthesize quizSet;
+//@synthesize questionList;
+//@synthesize quizSet;
 
 - (void)viewDidLoad
 {
@@ -75,7 +75,7 @@
     eachQuestionDistances = 45;
     
     controlList = [[NSMutableArray alloc] init];
-    questionList = [[NSMutableArray alloc] init];
+   // questionList = [[NSMutableArray alloc] init];
     
     // Adding the first textfield for the first question
     CGRect numberBulletFrame = CGRectMake(x, y, textWidth, textHeight);
@@ -223,29 +223,18 @@
          NSLog(@"Quiz id reqest success");
         NSInteger q_id=[self getQuestionID];
         NSLog(@"question id reqest success");
+    
+    NSMutableArray *questionSet=[[NSMutableArray alloc] init];
+    
         
-        //to be add to quiz entity
-        NSEntityDescription *quizEntity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
-        
-        NSManagedObject *quizObj=[[NSManagedObject alloc]initWithEntity:quizEntity insertIntoManagedObjectContext:context];
-        //set qwz id
-        [quizObj setValue:[NSNumber numberWithInt:qwz_id]  forKey:@"qwz_id"];
-        
-        
+               
         //set title for quiz entity
         UITextField *title = (UITextField *)[scrollView viewWithTag:25];
-        NSString *titleText = [title text];
-        if (titleText != nil && ![titleText isEqualToString:@""]) {
-            [quizObj setValue:titleText forKey:@"title"];
-            
-        }
-        
+        NSString *titleText = [title text];        
         NSError *error = nil;
         
         
-        //add quiz
-    
-        [context save:&error];
+        
           NSLog(@"quiz add success");
         // Validate code may go here
         NSInteger emptyCount = 0;
@@ -254,39 +243,26 @@
             NSLog(@"%d of %d) %@", i, [controlList count], [[controlList objectAtIndex:i] text]);
             
             NSString *text = [[controlList objectAtIndex:i] text];
+            [questionSet addObject:text];
             if (text == nil || [text isEqualToString:@""]) {
                 NSLog(@"Empty cell detected!");
                 emptyCount++;
             }
             else {
                 NSLog(@"Question detected!: %@", [text copy]);
-                
-                //establish question obj for insert
-                NSEntityDescription *questionEntity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-                NSManagedObject *questionObj=[[NSManagedObject alloc]initWithEntity:questionEntity insertIntoManagedObjectContext:context];
-                
-                //set quiz id
-                [questionObj setValue:[NSNumber numberWithInt:qwz_id]  forKey:@"qwz_id"];
-                
-                //set question id
-                [questionObj setValue:[NSNumber numberWithInt:((q_id+i)-emptyCount)]  forKey:@"q_id"];
-                
-                [questionObj setValue:text forKey:@"question"];
-                //[questionList addObject:[text copy]];
-                
-                //add question
-                [context save:&error];
-            }
+               
+                           }
         }
         
-        /*
-         if (nQuestions == 0) {
-         // It's all empty, show some alert
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You should add some question before you go." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+         if (emptyCount < 0) {
+        // It's all empty, show some alert
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You should add some question before you go." delegate:self.view cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
          [alert show];
+         
          }
          else {
-         NSLog(@"questionList: %@", questionList);
+         //NSLog(@"questionList: %@", questionList);
          
          UITextField *title = (UITextField *)[scrollView viewWithTag:25];
          NSString *titleText = [title text];
@@ -296,15 +272,44 @@
          // quizSet = [[QWZQuizSet alloc] init];
          }
          else {
-         quizSet = [[QWZQuizSet alloc] initWithTitle:[titleText copy]];
+             //to be add to quiz entity
+             NSEntityDescription *quizEntity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
+             
+             NSManagedObject *quizObj=[[NSManagedObject alloc]initWithEntity:quizEntity insertIntoManagedObjectContext:context];
+             //set qwz id
+             [quizObj setValue:[NSNumber numberWithInt:qwz_id]  forKey:@"qwz_id"];
+             
+             [quizObj setValue:titleText forKey:@"title"];
+             //add quiz
+             
+             [context save:&error];
+
+        // quizSet = [[QWZQuizSet alloc] initWithTitle:[titleText copy]];
          }
          
          
          //added by core data
-         for (NSInteger i = 0; i < [questionList count]; i++) {
-         [quizSet addQuiz:[[QWZQuiz alloc] initWithQuestion:[questionList objectAtIndex:i]]];
+         for (NSInteger i = 0; i < [questionSet count]; i++) {
+         //[quizSet addQuiz:[[QWZQuiz alloc] initWithQuestion:[questionList objectAtIndex:i]]];
+             
+             //establish question obj for insert
+             NSEntityDescription *questionEntity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+             NSManagedObject *questionObj=[[NSManagedObject alloc]initWithEntity:questionEntity insertIntoManagedObjectContext:context];
+             
+             //set quiz id
+             [questionObj setValue:[NSNumber numberWithInt:qwz_id]  forKey:@"qwz_id"];
+             
+             //set question id
+             [questionObj setValue:[NSNumber numberWithInt:((q_id+i)-emptyCount)]  forKey:@"q_id"];
+             
+             [questionObj setValue:[questionSet objectAtIndex:i] forKey:@"question"];
+             //[questionList addObject:[text copy]];
+             
+             //add question
+             [context save:&error];
+
          }
-         */
+         
         
         // Submit a qwizzle to parents' viewcontroller
     
@@ -313,7 +318,7 @@
         [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
         
     }
-
+}
 - (IBAction)cancel:(id)sender
 {
     // Dismiss this dialog

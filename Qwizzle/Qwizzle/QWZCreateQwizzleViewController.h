@@ -49,8 +49,8 @@
 - (void)dismissKeyboard;
 
 @property (nonatomic, weak) QWZQwizzleViewController *origin;
-@property (nonatomic, strong) NSMutableArray *questionList;
+//@property (nonatomic, strong) NSMutableArray *questionList;
 @property (nonatomic, strong) NSMutableArray *controlList;
-@property (nonatomic, strong) QWZQuizSet *quizSet;
+//@property (nonatomic, strong) QWZQuizSet *quizSet;
 
 @end

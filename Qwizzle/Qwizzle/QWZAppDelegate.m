@@ -142,10 +142,11 @@
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
+  
     
     NSLog(@"creating persistent store coordinator...");
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"QWZdatabase.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Qwizzle1.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -179,7 +180,6 @@
     
     return _persistentStoreCoordinator;
 }
-
 // Returns the URL to the application's Documents directory.
 - (NSURL *)applicationDocumentsDirectory
 {

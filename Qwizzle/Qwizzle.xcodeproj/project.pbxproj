@@ -14,9 +14,9 @@
 		B898E4CB17112F4B008A3393 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4CA17112F4B008A3393 /* Quiz.m */; };
 		B898E4CE17112F62008A3393 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4CD17112F62008A3393 /* Question.m */; };
 		B898E4D117112F6A008A3393 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B898E4D017112F6A008A3393 /* Answer.m */; };
+		B898E4D617118B31008A3393 /* QWZdatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B898E4D517118B31008A3393 /* QWZdatabase.sqlite */; };
 		B8B26F23170F9576006F56C0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */; };
 		B8B26F2B170F9EC4006F56C0 /* QWZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */; };
-		B8B26F3817108746006F56C0 /* QWZdatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */; };
 		B8CB27ED17012CA1001BB56E /* QWZTakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EC17012CA1001BB56E /* QWZTakeView.m */; };
 		B8CB27F017012D34001BB56E /* QWZViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB27EF17012D34001BB56E /* QWZViewView.m */; };
 		E833CF871707681A0006B832 /* Storyboard_v2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E833CF861707681A0006B832 /* Storyboard_v2.storyboard */; };
@@ -55,9 +55,9 @@
 		B898E4CD17112F62008A3393 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		B898E4CF17112F6A008A3393 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
 		B898E4D017112F6A008A3393 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		B898E4D517118B31008A3393 /* QWZdatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = QWZdatabase.sqlite; sourceTree = "<group>"; };
 		B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B8B26F2A170F9EC4006F56C0 /* QWZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QWZModel.xcdatamodel; sourceTree = "<group>"; };
-		B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = QWZdatabase.sqlite; sourceTree = "<group>"; };
 		B8CB27EB17012CA1001BB56E /* QWZTakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZTakeView.h; sourceTree = "<group>"; };
 		B8CB27EC17012CA1001BB56E /* QWZTakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWZTakeView.m; sourceTree = "<group>"; };
 		B8CB27EE17012D34001BB56E /* QWZViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZViewView.h; sourceTree = "<group>"; };
@@ -132,11 +132,11 @@
 		E873E66016FCF6640097F4F2 = {
 			isa = PBXGroup;
 			children = (
+				B898E4D517118B31008A3393 /* QWZdatabase.sqlite */,
 				B898E4CF17112F6A008A3393 /* Answer.h */,
 				B898E4D017112F6A008A3393 /* Answer.m */,
 				B898E4CC17112F62008A3393 /* Question.h */,
 				B898E4CD17112F62008A3393 /* Question.m */,
-				B8B26F3717108746006F56C0 /* QWZdatabase.sqlite */,
 				B8B26F22170F9576006F56C0 /* libsqlite3.0.dylib */,
 				E8EA1F6A170B9F1000956433 /* Default-568h@2x.png */,
 				E8EA1F68170B9F0C00956433 /* Default@2x.png */,
@@ -272,7 +272,7 @@
 				E8EA1F67170B9EFF00956433 /* Default.png in Resources */,
 				E8EA1F69170B9F0C00956433 /* Default@2x.png in Resources */,
 				E8EA1F6B170B9F1000956433 /* Default-568h@2x.png in Resources */,
-				B8B26F3817108746006F56C0 /* QWZdatabase.sqlite in Resources */,
+				B898E4D617118B31008A3393 /* QWZdatabase.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

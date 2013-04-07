@@ -204,22 +204,22 @@ if (fetchedObj == nil) {
         [context save:&errror];
         
     }
-    
-    if ([answerList count] == 0) {
+   
+    if (emptyCount > 0) {
         // All empty
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You should fill out some answers before you go." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You should fill out some answers before you go." delegate:nil  cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
         [alert show];
     }
-    else {
+   /* else {
         NSLog(@"answerList: %@", answerList);
-       /*
+    
         answeredQuizSet = [[QWZAnsweredQuizSet alloc] initWithTitle:[quizSet title]];
         for (NSInteger i = 0; i < [answerList count]; i++) {
             // Add a new item to the answered quiz set with the original question and the given answer
             NSLog(@"getting the question: %@", [[[quizSet allQuizzes] objectAtIndex:i] question]);
             [answeredQuizSet addQuiz:[[QWZQuiz alloc] initWithQuestion:[[[quizSet allQuizzes] objectAtIndex:i] question] answer:[answerList objectAtIndex:i]]];*/
-        }
-        
+       // } 
+
         // Submit a qwizzle to parents' viewcontroller
         [origin fetchSubmitQuiz];
         
