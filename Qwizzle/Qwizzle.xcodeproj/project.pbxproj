@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85058731712EA1F00110A31 /* QWZModel copy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B85058711712EA1F00110A31 /* QWZModel copy.xcdatamodeld */; };
 		B877B19B16FFD25D00007668 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B877B19A16FFD25D00007668 /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B877B284170108EF00007668 /* Storyboard-old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B877B283170108EE00007668 /* Storyboard-old.storyboard */; };
 		B877B28C170109E600007668 /* QWZCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B877B289170109E600007668 /* QWZCreateView.m */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B85058721712EA1F00110A31 /* QWZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QWZModel.xcdatamodel; sourceTree = "<group>"; };
 		B877B19A16FFD25D00007668 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B877B283170108EE00007668 /* Storyboard-old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-old.storyboard"; sourceTree = "<group>"; };
 		B877B288170109E600007668 /* QWZCreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWZCreateView.h; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				E8EA1F68170B9F0C00956433 /* Default@2x.png */,
 				E8EA1F66170B9EFF00956433 /* Default.png */,
 				B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */,
+				B85058711712EA1F00110A31 /* QWZModel copy.xcdatamodeld */,
 				B898E4C917112F4B008A3393 /* Quiz.h */,
 				B898E4CA17112F4B008A3393 /* Quiz.m */,
 				E873E67216FCF6640097F4F2 /* Qwizzle */,
@@ -301,6 +304,7 @@
 				B898E4CB17112F4B008A3393 /* Quiz.m in Sources */,
 				B898E4CE17112F62008A3393 /* Question.m in Sources */,
 				B898E4D117112F6A008A3393 /* Answer.m in Sources */,
+				B85058731712EA1F00110A31 /* QWZModel copy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +428,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		B85058711712EA1F00110A31 /* QWZModel copy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B85058721712EA1F00110A31 /* QWZModel.xcdatamodel */,
+			);
+			currentVersion = B85058721712EA1F00110A31 /* QWZModel.xcdatamodel */;
+			path = "QWZModel copy.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		B8B26F29170F9EC4006F56C0 /* QWZModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
