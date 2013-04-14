@@ -8,14 +8,14 @@
         <attribute name="questionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="quizID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="questions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="answers" inverseEntity="Quiz" syncable="YES"/>
-        <relationship name="quizzs" optional="YES" minCount="1" maxCount="1" deletionRule="Deny" destinationEntity="Question" inverseName="answers" inverseEntity="Question" syncable="YES"/>
+        <relationship name="quizzes" optional="YES" minCount="1" maxCount="1" deletionRule="Deny" destinationEntity="Question" inverseName="answers" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="Question" representedClassName="Question" syncable="YES">
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="questionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="quizID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Answer" inverseName="quizzs" inverseEntity="Answer" syncable="YES"/>
-        <relationship name="quizzs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="questions" inverseEntity="Quiz" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Answer" inverseName="quizzes" inverseEntity="Answer" syncable="YES"/>
+        <relationship name="quizzes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="questions" inverseEntity="Quiz" syncable="YES"/>
     </entity>
     <entity name="Quiz" representedClassName="Quiz" syncable="YES">
         <attribute name="creation_date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -23,7 +23,7 @@
         <attribute name="quizID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="answers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Answer" inverseName="questions" inverseEntity="Answer" syncable="YES"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Question" inverseName="quizzs" inverseEntity="Question" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Question" inverseName="quizzes" inverseEntity="Question" syncable="YES"/>
     </entity>
     <elements>
         <element name="Answer" positionX="765" positionY="-55" width="128" height="163"/>
